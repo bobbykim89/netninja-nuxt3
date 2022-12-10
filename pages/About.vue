@@ -11,10 +11,13 @@
       corrupti a asperiores incidunt perferendis nesciunt enim quis fugit neque
       officiis!
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch('/api/currency/GBP')
+</script>
 
 <style lang="scss" scoped>
 h2 {
